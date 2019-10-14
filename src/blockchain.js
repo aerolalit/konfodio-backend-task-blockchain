@@ -6,7 +6,11 @@ var BlockChain = (function () {
     var pT ;    // pendingTransactions
     var bS ;    // blockSize
 
-    
+    /**
+     * @param {Array} initialBalances array with initial balances
+     * @param {Array} transactions array of transactions
+     * @param {Int} blockSize max num of transaction in a block
+     */
     init = function(initialBalances, transactions, blockSize){
         pT = transactions;
         bS = blockSize;
@@ -14,8 +18,8 @@ var BlockChain = (function () {
         block = createGenesisBlock();
         for (var i=0; i< initialBalances.length; i++){
             if(block.transactionCount() < bS){
-                block.addTransaction([-1, i, initialBalances[i]]);
-            } else {
+                block.addTransaction([-1, i, initialBalances[i]]); // add arbitary transaction [-1, address, amount]
+            } else {                                               // for each initial balances
                 block.mineBlock();
                 addBlocktoChain(block);
                 block = new Block([], getLastBlockHash());

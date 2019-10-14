@@ -1,6 +1,20 @@
 {
   "name": "konfodio-backend-task-blockchain",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "homepage": "https://github.com/aerolalit/konfodio-backend-task-blockchain",
+  "author": {
+    "name": "Lalit Singh",
+    "email": "aerolalit@gmail.com",
+    "url": "http://github.com/aerolalit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aerolalit/konfodio-backend-task-blockchain"
+  },
+  "bugs": {
+    "url": "https://github.com/aerolalit/konfodio-backend-task-blockchain/issues"
+  },
+  "license": "MIT",
   "description": "This module is written as the solution to the backend task given konfodio. ",
   "main": "src/blockchain.js",
   "directories": {
@@ -20,7 +34,5 @@
   },
   "keywords": [
     "blockchain"
-  ],
-  "author": "Lalit Singh <aerolalit@gmail.com>",
-  "license": "ISC"
+  ]
 }
